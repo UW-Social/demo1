@@ -1,0 +1,2 @@
+import{E as t}from"./EventList-DGXRoI3Z.js";import{d as o,r as s,c as a,a as c,o as r,_ as n}from"./main-V8uREbGC.js";import"./event-D73PKLgd.js";const _={class:"mobile-events-page"},l=o({__name:"MobileEvents",setup(p){const e=s("");return(i,m)=>(r(),a("div",_,[c(t,{category:e.value},null,8,["category"])]))}}),u=n(l,[["__scopeId","data-v-966f654e"]]);export{u as default};
+//# sourceMappingURL=MobileEvents-C3fYGnZ9.js.map
