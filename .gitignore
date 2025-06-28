@@ -23,7 +23,8 @@ Thumbs.db
 *.sw?
 
 # # 依赖目录
-# node_modules/
+Backend/*
+node_modules/
 # dist/
 # build/
 # target/
