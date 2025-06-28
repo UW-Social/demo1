@@ -42,10 +42,25 @@ jobs:
           cd Frontend
           npm run build
 
-      # 如果你真的需要 node_modules 一起上传，取消下面两行注释
-      #- name: Copy node_modules to dist
-      #  run: cp -r Frontend/node_modules Frontend/dist/
+      # # 可以加 artifacts 上传
+      # - name: Upload dist
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: dist
+      #     path: Frontend/dist
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download dist
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: Frontend/dist
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
