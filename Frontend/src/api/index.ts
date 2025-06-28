@@ -3,7 +3,7 @@ import axios from 'axios'
 // 创建axios实例
 const api = axios.create({
   baseURL: import.meta.env.PROD 
-    ? 'https://uw-social.com/api'  // 生产环境API地址
+    ? 'https://uw-social.com/demo1/api'  // 生产环境API地址
     : 'http://localhost:8080/api',       // 开发环境API地址
   timeout: 10000,
   headers: {
